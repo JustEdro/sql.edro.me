@@ -1,0 +1,22 @@
+php_flag magic_quotes_gpc Off
+
+php_flag display_errors on 
+php_value error_reporting 255
+
+ErrorDocument 404 /404.html
+
+RewriteEngine on
+RewriteBase /
+
+RewriteRule .*/service/(.*)$    /service/$1
+RewriteRule .*/images/(.*)$     /images/$1
+
+#RewriteRule ^lobby/?$                             /lobby.php
+
+#RewriteRule ^blackboard/?$                        /blackboard.php
+#RewriteRule ^blackboard/([0-9]+)/?$               /blackboard.php?theme=$1
+#RewriteRule ^blackboard/([0-9]+)/([0-9]+)/?$      /blackboard.php?theme=$1&task=$2
+
+#RewriteRule ^taskeditor/?$                        /taskeditor.php
+#RewriteRule ^taskeditor/([a-zA-Z]+)/?$            /taskeditor.php?act=$1
+#RewriteRule ^taskeditor/([a-zA-Z]+)/([0-9]+)/?$   /taskeditor.php?act=$1&theme=$2
